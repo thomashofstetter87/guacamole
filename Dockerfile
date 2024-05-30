@@ -202,21 +202,35 @@ RUN mkdir /docker-entrypoint-initdb.d
 WORKDIR ${GUACAMOLE_HOME}
 
 # Bring runtime environment up to date and install runtime dependencies
-RUN apk add --no-cache                \
-  bash                          \
-  bash-completion               \
-  ca-certificates               \
-  curl                          \
-  ghostscript                   \
-  netcat-openbsd                \
-  openjdk11-jdk                 \
-  postgresql13                  \
-  shadow                        \
-  terminus-font                 \
-  ttf-dejavu                    \
-  ttf-liberation                \
-  tzdata                        \
-  util-linux-login
+# RUN apk add --no-cache                \
+#   bash                          \
+#   bash-completion               \
+#   ca-certificates               \
+#   curl                          \
+#   ghostscript                   \
+#   netcat-openbsd                \
+#   openjdk11-jdk                 \
+#   postgresql13                  \
+#   shadow                        \
+#   terminus-font                 \
+#   ttf-dejavu                    \
+#   ttf-liberation                \
+#   tzdata                        \
+#   util-linux-login
+RUN apk add --no-cache bash
+RUN apk add --no-cache bash-compilation
+RUN apk add --no-cache ca-certificates
+RUN apk add --no-cache curl
+RUN apk add --no-cache ghostscript
+RUN apk add --no-cache netcat-openbsd
+RUN apk add --no-cache openjdk11-jdk
+RUN apk add --no-cache postgresql13
+RUN apk add --no-cache shadow
+RUN apk add --no-cache terminus-font
+RUN apk add --no-cache ttf-dejavu
+RUN apk add --no-cache ttf-liberation
+RUN apk add --no-cache tzdata
+RUN apk add --no-cache util-linux-login
 
 RUN xargs apk add --no-cache < ${PREFIX_DIR}/DEPENDENCIES
 RUN apk add --no-cache -X https://dl-cdn.alpinelinux.org/alpine/edge/testing gosu 
