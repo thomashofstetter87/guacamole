@@ -1,7 +1,7 @@
 {
     "containerDefinitions": [
         {
-            "name": "guacamole",
+            "name": "welcome-to-dotnet",
             "image": "868140158611.dkr.ecr.us-east-2.amazonaws.com/ecs-demo:sha-eb78d3b",
             "cpu": 0,
             "portMappings": [
