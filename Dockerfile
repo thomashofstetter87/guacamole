@@ -216,9 +216,9 @@ RUN apk add --no-cache                \
   ttf-dejavu                    \
   ttf-liberation                \
   tzdata                        \
-  util-linux-login && \
-  xargs apk add --no-cache < ${PREFIX_DIR}/DEPENDENCIES
+  util-linux-login
 
+RUN xargs apk add --no-cache < ${PREFIX_DIR}/DEPENDENCIES
 RUN apk add --no-cache -X https://dl-cdn.alpinelinux.org/alpine/edge/testing gosu 
 
 # Install tomcat
