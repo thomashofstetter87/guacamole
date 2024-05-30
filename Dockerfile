@@ -218,7 +218,7 @@ WORKDIR ${GUACAMOLE_HOME}
 #   tzdata                        \
 #   util-linux-login
 RUN apk add --no-cache bash
-RUN apk add --no-cache bash-compilation
+RUN apk add --no-cache bash-completion
 RUN apk add --no-cache ca-certificates
 RUN apk add --no-cache curl
 RUN apk add --no-cache ghostscript
