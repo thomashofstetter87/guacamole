@@ -224,7 +224,7 @@ RUN apk add --no-cache curl
 RUN apk add --no-cache ghostscript
 RUN apk add --no-cache netcat-openbsd
 RUN apk add --no-cache openjdk11-jdk
-RUN apk add --no-cache postgresql13
+RUN apk add --no-cache postgresql16
 RUN apk add --no-cache shadow
 RUN apk add --no-cache terminus-font
 RUN apk add --no-cache ttf-dejavu
